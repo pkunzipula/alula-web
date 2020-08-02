@@ -30,7 +30,7 @@ class Profile extends Component {
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="ml-auto">
                             <Nav.Item value="Dashboard" icon="activity" />
-                                <Nav.Item hasSubNav active value="Settings" icon="settings">
+                                <Nav.Item active hasSubNav value="Settings" icon="settings">
                                     <Nav.SubItem value="Profile" icon="user" />
                                     <Dropdown.ItemDivider />
                                     <Nav.SubItem value="Help" icon="help-circle" />
@@ -49,6 +49,21 @@ class Profile extends Component {
                         <p className="lead">Edit Profile</p>
                         <div>
                             <Form.FieldSet>
+                                <Form.Group label="Update Property ID" isRequired>
+                                    <p>Only update this portion if you have moved into a new property. Updating this will send future rent payments to cover the new property, never an old one.</p>
+                                    <Form.InputGroup>
+                                        <Form.InputGroupPrepend>
+                                        <Form.InputGroupText>
+                                            A-
+                                        </Form.InputGroupText>
+                                        </Form.InputGroupPrepend>
+                                        <Form.MaskedInput 
+                                            name="update-prop-id" 
+                                            mask={[/\d/, /\d/, /\d/, "-", /\d/, /\d/, /\d/, "-", /\d/, /\d/, /\d/]}
+                                        />
+                                    </Form.InputGroup>
+                                </Form.Group>
+                                <hr />
                                 <Form.Group label="Update Name" isRequired>
                                     <Form.Input name="update-name" />
                                 </Form.Group>
@@ -56,12 +71,11 @@ class Profile extends Component {
                                     <Form.Input name="update-email" />
                                 </Form.Group>
                                 <Form.Group label="Update Password" isRequired>
-                                    <Form.Input name="update-password" />
+                                    <Form.Input type="password" name="update-password" />
                                 </Form.Group>
                                 <Form.Group label="Phone number" isRequired>
                                     <Form.MaskedInput 
-                                        name="update-phone-number" 
-                                        placeholder="(555)555-5555"
+                                        name="update-phone-number"
                                         mask={["(", /\d/, /\d/, /\d/, ")", /\d/, /\d/, /\d/, "-", /\d/, /\d/, /\d/, /\d/]}
                                     />
                                 </Form.Group>
@@ -78,14 +92,28 @@ class Profile extends Component {
                         <p className="lead">Update Payment Method</p>
                         <div>
                             <Form.FieldSet>
+                                <p>Once saved, you will <strong>not</strong> have to re-enter your card number everytime you make a payment.</p>
                                 <Form.Group label="Account Holder's Name" isRequired>
                                     <Form.Input name="update-acc-name" />
                                 </Form.Group>
-                                <Form.Group label="Routing Number" isRequired>
-                                    <Form.Input name="update-routing-number" />
+                                <Form.Group label="Card Number" isRequired>
+                                    <Form.MaskedInput 
+                                        name="update-card-number"
+                                        mask={[/\d/, /\d/, /\d/, /\d/, "", /\d/,/\d/,/\d/,/\d/, "", /\d/,/\d/,/\d/,/\d/, "", /\d/,/\d/,/\d/,/\d/]}
+                                    />
                                 </Form.Group>
-                                <Form.Group label="Account Number" isRequired>
-                                    <Form.Input name="update-account-number" />
+                                <Form.Group label="Expiration" isRequired>
+                                    <Form.Input 
+                                        name="update-card-expiration" 
+                                        placeholder="e.g 01/21"
+                                        mask={[/\d/, /\d/, "/", /\d/,/\d/]}
+                                    />
+                                </Form.Group>
+                                <Form.Group label="CVC" isRequired>
+                                    <Form.Input 
+                                        name="update-cvc" 
+                                        mask={[/\d/, /\d/, /\d/]}
+                                    />
                                 </Form.Group>
                                 <Form.Group label="Address" isRequired>
                                     <Form.Input name="update-address" className="mb-4" placeholder="Address" />
@@ -146,12 +174,13 @@ class Profile extends Component {
                         </Form.FieldSet>
                     </div>
                 </Container>
+
                 {/* END Privacy and Policy */}
 
                 {/* Footer */}
                 <Container>
                         <Navbar>
-                            <p class="mt-5 mb-3 text-muted">© 2020 Alula Ltd. All rights reserved.</p>
+                            <p class="mt-5 mb-3 text-muted">© 2020 Toomer Ltd. All rights reserved.</p>
                         </Navbar>
                     </Container>
                 {/* END Footer */}

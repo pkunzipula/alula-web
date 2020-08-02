@@ -60,8 +60,12 @@ class TenantDashboard extends Component {
                             </div>
                         </div>
                         <div className="col-12 col-md-6">
-                            <div className="card">
+                            <div className="card other-card">
                                 <p className="lead m-3">Lease Term</p>
+                                <div className="container text-center my-5">
+                                    <h5 className="lead mb-5">Remaining</h5>
+                                    <h1 className="display-3">11m 13d</h1>
+                                </div>
                             </div>
                         </div>
                     </div>

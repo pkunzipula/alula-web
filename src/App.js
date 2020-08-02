@@ -5,11 +5,12 @@ import Login from './components/LoginComponent';
 import Register from './components/RegisterComponent';
 import PODashboard from './components/PODashboardComponent';
 import POProfile from './components/POProfileComponent';
-import TenantDashboard from './components/TenantDashboard';
+import TenantDashboard from './components/TenantDashboardComponent';
+import TenantProfile from './components/TenantProfileComponent';
 
 function App() {
   return (
-    <TenantDashboard />
+    <TenantProfile />
   );
 }
 

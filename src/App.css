@@ -301,6 +301,10 @@ List Group
   color: #d9534f;
 }
 
+.other-card {
+  height: 285.95px;
+}
+
 
 body {
   font-family: Arial, Helvetica, sans-serif;
