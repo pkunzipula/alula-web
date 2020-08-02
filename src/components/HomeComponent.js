@@ -1,6 +1,6 @@
 import React, { Component} from 'react';
 import { Jumbotron, Navbar, Nav, Button } from 'react-bootstrap';
-
+import { Link } from 'react-router-dom';
 import logo from '../images/logo.svg';
 import building from '../images/building.jpg'
 
@@ -31,7 +31,7 @@ class Home extends Component {
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="navbar-nav ml-auto">
                                 <Nav.Link href="#howItWorks" className="nav-item mr-5 active home-tabs">About Alula</Nav.Link>
-                                <Nav.Link href="" className="nav-item mr-5 active"><Button className="btn-lg">Sign In</Button></Nav.Link>
+                                <Nav.Link href="" className="nav-item mr-5 active"><Link to="/login" ><Button className="btn-lg">Sign In</Button></Link></Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Navbar>
@@ -43,7 +43,7 @@ class Home extends Component {
                             <div className="col pt-5">
                                 <h1 className="display-4">Property Management Done Right</h1>
                                 <p className="lead mb-5">A One Stop Shop for Landlords and Property Managers</p>
-                                <Button className="btn-lg mt-5">Let's Get Started</Button>
+                                <Link to="/register"><Button className="btn-lg mt-5">Let's Get Started</Button></Link>
                             </div>
                         </div>
                     </div>
@@ -151,7 +151,7 @@ class Home extends Component {
                 <footer className="footer-bg">
                     <div className="container space">
                         <div className="row justify-content-md-between">
-                           <div className="col-5 col-md-3 col-lg-2 order-lg-4 mb-7 mb-lg-0">
+                           {/* <div className="col-5 col-md-3 col-lg-2 order-lg-4 mb-7 mb-lg-0">
                                 <h3 className="h6 text-white mb-3">Company</h3>
                                 
                                 <div className="list-group list-group-flush list-group-transparent">
@@ -161,15 +161,17 @@ class Home extends Component {
                                     <a className="list-group-item list-group-item-action" href="#">Terms & Conditions</a>
                                 </div>
                                 
-                            </div>
+                            </div> */}
                             <div className="col-5 col-md-3 col-lg-2 order-lg-6 mb-7 mb-lg-0">
                                 <h3 className="h6 text-white mb-3">Social</h3>
                                 
                                 <div className="list-group list-group-flush list-group-transparent">
-                                    <a className="list-group-item list-group-item-action" href="contact.html">
-                                        <i className="fas fa-envelope mr-1"></i> Contact Us
-                                    </a>
-                                    <a className="list-group-item list-group-item-action" href="#">
+                                    <Link to="/contact">
+                                        <a className="list-group-item list-group-item-action" href="contact.html">
+                                            <i className="fas fa-envelope mr-1"></i> Contact Us
+                                        </a>
+                                    </Link>
+                                    {/* <a className="list-group-item list-group-item-action" href="#">
                                         <i className="fab fa-facebook-f min-width-3 text-center mr-2"></i> Facebook
                                     </a>
                                     <a className="list-group-item list-group-item-action" href="#">
@@ -177,7 +179,7 @@ class Home extends Component {
                                     </a>
                                     <a className="list-group-item list-group-item-action" href="#">
                                         <i className="fab fa-instagram min-width-3 text-center mr-1"></i> Instagram
-                                    </a>
+                                    </a> */}
                                 </div>
                             </div>
                             <div className="col-lg-4 order-lg-1 d-flex align-items-start flex-column">

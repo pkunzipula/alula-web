@@ -1,6 +1,7 @@
 import React, { Component} from 'react';
 import { Form, FormGroup, InputGroup, Button, Container, Navbar } from 'react-bootstrap';
 import "tabler-react/dist/Tabler.css";
+import { Link } from 'react-router-dom';
 
 import logo from '../images/logo-color.svg';
 
@@ -28,7 +29,7 @@ class TenantRegister extends Component {
                 <Container className="mt-5 pt-5">
                     <Form className="form-signin">
                         <Container className="mb-5 text-center">
-                            <img src={logo} height="100" width="100" alt="company logo" />
+                            <Link to="/home"><a href=""><img src={logo} height="100" width="100" alt="company logo" /></a></Link>
                         </Container>
                         <h2 className="text-center mb-1">Welcome to Alula</h2>
                         <p className="lead text-center text-muted mb-5">Property Management Done Right!</p>
@@ -52,7 +53,7 @@ class TenantRegister extends Component {
                             <Container className="text-center">
                                 <Button type="submit" value="submit" className="btn btn-lg btn-success my-4">Sign Up</Button>
                                 <br />
-                                <a href="" className="button">Have an Account? Sign In Here</a>
+                                <Link to="/login"><a href="" className="button">Have an Account? Sign In Here</a></Link>
                             </Container>
                         </Container>
                     </Form>

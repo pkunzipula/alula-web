@@ -29,7 +29,7 @@ class PODashboard extends Component {
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="ml-auto">
-                            <Nav.Item active value="Dashboard" icon="activity" />
+                                <Nav.Item active value="Dashboard" icon="activity" />
                                 <Nav.Item hasSubNav value="Settings" icon="settings">
                                     <Nav.SubItem value="Profile" icon="user" />
                                     <Dropdown.ItemDivider />

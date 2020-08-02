@@ -1,5 +1,8 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter } from 'react-router-dom';
+
+import Main from './components/MainComponent'
 import Home from './components/HomeComponent';
 import Login from './components/LoginComponent';
 import Register from './components/RegisterComponent';
@@ -10,7 +13,13 @@ import TenantProfile from './components/TenantProfileComponent';
 
 function App() {
   return (
-    <TenantProfile />
+    
+      <BrowserRouter>
+        <div className="App">
+          <Main />
+        </div>
+      </BrowserRouter>
+    
   );
 }
 
