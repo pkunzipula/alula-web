@@ -45,7 +45,7 @@ class TenantLogin extends Component {
                                     innerRef={input => this.password = input} />
                             </FormGroup>
                             <Container className="text-center">
-                                <Button type="submit" value="submit" className="btn btn-lg btn-success my-4">Sign Up</Button>
+                                <Link to="/dashboard"><Button type="submit" value="submit" className="btn btn-lg btn-success my-4">Login</Button></Link>
                                 <br />
                                 <Link to="/register"><a href="" className="button">Need an Account? Sign Up Here</a></Link>
                             </Container>
@@ -56,7 +56,7 @@ class TenantLogin extends Component {
                 {/* Footer */}
                 <Container>
                     <Navbar fixed="bottom">
-                        <p class="mt-5 mb-3 text-muted">© 2020 Toomer Ltd. All rights reserved.</p>
+                        <p class="mt-5 mb-3 text-muted">© 2020 Alula. All rights reserved.</p>
                     </Navbar>
                 </Container>
                 {/* END Footer */}

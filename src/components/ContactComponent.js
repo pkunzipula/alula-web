@@ -22,7 +22,7 @@ class Contact extends Component {
                 {/* Navigation Bar */}
                 <Navbar className="mx-5">
                     <Nav>
-                        <Link to="/home"><Nav.Item value="back" icon="arrow-left" /></Link>
+                        <Nav.Item to="/home" value="back" icon="arrow-left" />
                     </Nav>
                 </Navbar>
                 {/* END Navigation Bar */}
@@ -55,7 +55,7 @@ class Contact extends Component {
                 {/* Footer */}
                 <Container>
                     <Navbar>
-                        <p class="mt-5 mb-3 text-muted">© 2020 Toomer Ltd. All rights reserved.</p>
+                        <p class="mt-5 mb-3 text-muted">© 2020 Alula. All rights reserved.</p>
                     </Navbar>
                 </Container>
                 {/* END Footer */}

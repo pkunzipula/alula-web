@@ -29,12 +29,12 @@ class Profile extends Component {
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="ml-auto">
-                            <Nav.Item value="Dashboard" icon="activity" />
+                            <Nav.Item to="/dashboard" value="Dashboard" icon="activity" />
                                 <Nav.Item hasSubNav active value="Settings" icon="settings">
                                     <Nav.SubItem value="Profile" icon="user" />
                                     <Dropdown.ItemDivider />
                                     <Nav.SubItem value="Help" icon="help-circle" />
-                                    <Nav.SubItem value="Sign Out" icon="log-out" />
+                                    <Nav.SubItem to="/home" value="Sign Out" icon="log-out" />
                                 </Nav.Item>
                             </Nav>
                         </Navbar.Collapse>
@@ -151,7 +151,7 @@ class Profile extends Component {
                 {/* Footer */}
                 <Container>
                         <Navbar>
-                            <p class="mt-5 mb-3 text-muted">© 2020 Alula Ltd. All rights reserved.</p>
+                            <p class="mt-5 mb-3 text-muted">© 2020 Alula. All rights reserved.</p>
                         </Navbar>
                     </Container>
                 {/* END Footer */}

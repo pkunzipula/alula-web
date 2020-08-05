@@ -69,7 +69,7 @@ class Home extends Component {
                                             <div className="accordion" id="accordion" role="tablist">
                                                 <div className="card">
                                                     <div className="card-header" role="tab" id="heading-2">
-                                                        <h6 className="mb-0"> <a className="collapsed" data-toggle="collapse" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2" data-abc="true"> Manage your Properties </a> </h6>
+                                                        <h6 className="mb-0"> <a className="collapsed" data-toggle="collapse" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2" data-abc="true">Manage your Properties </a> </h6>
                                                     </div>
                                                     <div id="collapse-2" className="collapse" role="tabpanel" aria-labelledby="heading-2" data-parent="#accordion">
                                                     <div className="card-body">
@@ -184,7 +184,7 @@ class Home extends Component {
                             </div>
                             <div className="col-lg-4 order-lg-1 d-flex align-items-start flex-column">
                                 <a href="#" className="my-5"><img src={logo} alt="logo" width="100px" /></a>
-                                <p className="small text-muted">© 2020 Toomer Ltd. All rights reserved.</p>
+                                <p className="small text-muted">© 2020 Alula. All rights reserved.</p>
                             </div>
                         </div>
                     </div>

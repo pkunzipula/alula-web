@@ -63,7 +63,7 @@ class TenantRegister extends Component {
                 {/* Footer */}
                 <Container>
                     <Navbar fixed="bottom">
-                        <p class="mt-5 mb-3 text-muted">© 2020 Toomer Ltd. All rights reserved.</p>
+                        <p class="mt-5 mb-3 text-muted">© 2020 Alula. All rights reserved.</p>
                     </Navbar>
                 </Container>
                 {/* END Footer */}
