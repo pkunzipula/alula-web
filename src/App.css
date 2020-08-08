@@ -309,6 +309,19 @@ List Group
   height: 285.95px;
 }
 
+/* User Select Screen */
+
+.tile, .tile:hover {
+  width: 200px;
+  border-radius: 8px;
+  background-color: #49796B;
+  color: white;
+  font-size: large;
+  font: 600;
+  text-decoration: none;
+  text-align: center;
+}
+
 
 body {
   font-family: Arial, Helvetica, sans-serif;

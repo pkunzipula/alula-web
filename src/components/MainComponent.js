@@ -5,6 +5,9 @@ import Register from './RegisterComponent';
 import Contact from './ContactComponent';
 import PODashboard from './PODashboardComponent';
 import POProfile from './POProfileComponent';
+import TenantDashboard from './TenantDashboardComponent';
+import TenantProfile from './TenantProfileComponent';
+import UserSelect from './UserSelectComponent'
 
 import { Switch, Route, Redirect } from 'react-router-dom';
 
@@ -20,6 +23,9 @@ class Main extends Component {
                 <Route path="/contact" component={Contact} />
                 <Route path="/dashboard" component={PODashboard} />
                 <Route path="/profile" component={POProfile} />
+                <Route path="/tenant" component={TenantDashboard} />
+                <Route path="/tenant-profile" component={TenantProfile} />
+                <Route path="/user-select" component={UserSelect} />
                 <Redirect to="/home" />
             </Switch>
         );

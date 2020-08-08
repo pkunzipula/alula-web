@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Navbar, Container, Pagination } from 'react-bootstrap';
-import { Nav, Table, Button, Dropdown, Badge } from 'tabler-react';
+import { Nav, Table, Button, Dropdown, Badge, Form } from 'tabler-react';
 import "tabler-react/dist/Tabler.css";
 
 
@@ -31,10 +31,10 @@ class TenantDashboard extends Component {
                             <Nav className="ml-auto">
                             <Nav.Item active value="Dashboard" icon="activity" />
                                 <Nav.Item hasSubNav value="Settings" icon="settings">
-                                    <Nav.SubItem value="Profile" icon="user" />
+                                    <Nav.SubItem to="/tenant-profile" value="Profile" icon="user" />
                                     <Dropdown.ItemDivider />
                                     <Nav.SubItem value="Help" icon="help-circle" />
-                                    <Nav.SubItem value="Sign Out" icon="log-out" />
+                                    <Nav.SubItem to="/home" value="Sign Out" icon="log-out" />
                                 </Nav.Item>
                             </Nav>
                         </Navbar.Collapse>
@@ -46,7 +46,7 @@ class TenantDashboard extends Component {
                     <h1 className="display-4 my-5 p-5">Dashboard</h1>
                 </Container>
                 
-                {/* Payment Due */}
+                {/* Payment Due/Lease Term */}
                 <Container className="mt-5">
                     <div className="row">
                         <div className="col-12 col-md-6">
@@ -70,12 +70,48 @@ class TenantDashboard extends Component {
                         </div>
                     </div>
                 </Container>
+                {/* END Payment/Lease Term */}
 
-                {/* END Payment Due */}
+                {/* Service Request */}
+                <Container className="mt-5">
+                    <div className="card">
+                    <div className="d-flex justify-content-between">
+                            <p className="lead m-3">Service Requests</p>
+                            <button className="btn btn-sm btn-success m-3"><i class="fas fa-plus mr-2"></i>Add Service Request</button>
+                        </div>
+                        <div className="table-responsive">
+                            <div className="container text-center">
+                                <Table>
+                                    <Table.Header>
+                                        <Table.ColHeader>Request Type</Table.ColHeader>
+                                        <Table.ColHeader>Created</Table.ColHeader>
+                                        <Table.ColHeader>Message</Table.ColHeader>
+                                        <Table.ColHeader>Completed</Table.ColHeader>
+                                    </Table.Header>
+                                    <Table.Body>
+                                        <Table.Row>
+                                            <Table.Col>Repair</Table.Col>
+                                            <Table.Col>08/02/20</Table.Col>
+                                            <Table.Col>Water heater has leaked all over the floor.</Table.Col>
+                                            <Table.Col>Yes</Table.Col>
+                                        </Table.Row>
+                                        
+                                    </Table.Body>
+                                </Table>
+                            </div>
+                        </div>
+                        <Container className="d-flex justify-content-center">
+                            <Pagination>
+                                <Pagination.First />
+                                <Pagination.Prev />
+                                <Pagination.Next />
+                                <Pagination.Last />
+                            </Pagination>
+                        </Container>
+                    </div>
+                </Container>
 
-                {/* Lease Completion Chart */}
-
-                {/* END Lease Completion Chart */}
+                {/* END Service Request */}
 
                 {/* Invoices Table - Needs Pagination. Invoices can be opened in printable PDF */}
                 <Container className="mt-5">

@@ -45,9 +45,9 @@ class TenantLogin extends Component {
                                     innerRef={input => this.password = input} />
                             </FormGroup>
                             <Container className="text-center">
-                                <Link to="/dashboard"><Button type="submit" value="submit" className="btn btn-lg btn-success my-4">Login</Button></Link>
+                                <Link to="/dashboard" className="btn btn-lg btn-success my-4">Login</Link>
                                 <br />
-                                <Link to="/register"><a href="" className="button">Need an Account? Sign Up Here</a></Link>
+                                <Link to="/register" className="button">Need an Account? Sign Up Here</Link>
                             </Container>
                         </Container>
                     </Form>

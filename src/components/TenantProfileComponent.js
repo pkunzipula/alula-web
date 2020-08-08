@@ -29,12 +29,12 @@ class Profile extends Component {
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="ml-auto">
-                            <Nav.Item value="Dashboard" icon="activity" />
+                            <Nav.Item to="/tenant" value="Dashboard" icon="activity" />
                                 <Nav.Item active hasSubNav value="Settings" icon="settings">
                                     <Nav.SubItem value="Profile" icon="user" />
                                     <Dropdown.ItemDivider />
                                     <Nav.SubItem value="Help" icon="help-circle" />
-                                    <Nav.SubItem value="Sign Out" icon="log-out" />
+                                    <Nav.SubItem to="/home" value="Sign Out" icon="log-out" />
                                 </Nav.Item>
                             </Nav>
                         </Navbar.Collapse>

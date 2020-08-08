@@ -5,12 +5,6 @@ import { Link } from 'react-router-dom';
 
 import logo from '../images/logo-color.svg';
 
-const required = val => val && val.length;
-const maxLength = len => val => !val || (val.length <= len);
-const minLength = len => val => val && (val.length >= len);
-const isNumber = val => !isNaN(+val);
-const validEmail = val => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
-
 // CAN SEE FULLNAME, EMAIL, PASSWORD AND CONFIRM PASSWORD IN ADDRESS BAR ** MUST FIX //
 
 class TenantRegister extends Component {
@@ -51,9 +45,9 @@ class TenantRegister extends Component {
                                     innerRef={input => this.password = input} />
                             </FormGroup>
                             <Container className="text-center">
-                                <Button type="submit" value="submit" className="btn btn-lg btn-success my-4">Sign Up</Button>
+                                <Link to="/user-select" className="btn btn-lg btn-success my-4">Sign Up</Link>
                                 <br />
-                                <Link to="/login"><a href="" className="button">Have an Account? Sign In Here</a></Link>
+                                <Link to="/login" className="button">Have an Account? Sign In Here</Link>
                             </Container>
                         </Container>
                     </Form>
