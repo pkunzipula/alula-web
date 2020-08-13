@@ -60,12 +60,12 @@ class PODashboard extends Component {
                                     </Table.Header>
                                     <Table.Body>
                                         <Table.Row>
-                                            <Table.Col><strong>23</strong></Table.Col>
-                                            <Table.Col><strong>$830,075</strong></Table.Col>
-                                            <Table.Col><strong>$20,519</strong></Table.Col>
-                                            <Table.Col><strong>13</strong></Table.Col>
+                                            <Table.Col><strong></strong></Table.Col>
+                                            <Table.Col><strong></strong></Table.Col>
+                                            <Table.Col><strong></strong></Table.Col>
+                                            <Table.Col><strong></strong></Table.Col>
                                             <Table.Col> 
-                                                <Button className="btn btn-sm btn-success"><i class="far fa-file-alt mr-2"></i>File Taxes</Button>
+                                                
                                             </Table.Col>
                                         </Table.Row>
                                     </Table.Body>
@@ -97,48 +97,12 @@ class PODashboard extends Component {
                                     </Table.Header>
                                     <Table.Body>
                                         <Table.Row>
-                                            <Table.Col><a href="">5612 Harmony Ave</a></Table.Col>
-                                            <Table.Col>Repair</Table.Col>
-                                            <Table.Col>08/02/20</Table.Col>
-                                            <Table.Col>Water heater has leaked all over the floor.</Table.Col>
+                                            <Table.Col><a href=""></a></Table.Col>
+                                            <Table.Col></Table.Col>
+                                            <Table.Col></Table.Col>
+                                            <Table.Col></Table.Col>
                                             <Table.Col>
                                                 <Form.Switch type="radio" name="1" value="1" />
-                                            </Table.Col>
-                                        </Table.Row>
-                                        <Table.Row>
-                                            <Table.Col><a href="">90210 Worst Show Blvd</a></Table.Col>
-                                            <Table.Col>Repair</Table.Col>
-                                            <Table.Col>07/20/20</Table.Col>
-                                            <Table.Col>Air Conditioner is not working.</Table.Col>
-                                            <Table.Col>
-                                                <Form.Switch type="radio" name="2" value="2" />
-                                            </Table.Col>
-                                        </Table.Row>
-                                        <Table.Row>
-                                            <Table.Col><a href="">5616 Pleasant Ave</a></Table.Col>
-                                            <Table.Col>Replace</Table.Col>
-                                            <Table.Col>07/01/20</Table.Col>
-                                            <Table.Col>Microwave is busted</Table.Col>
-                                            <Table.Col>
-                                                <Form.Switch type="radio" name="3" value="3" />
-                                            </Table.Col>
-                                        </Table.Row>
-                                        <Table.Row>
-                                            <Table.Col><a href="">789 Harambe Dr. #101</a></Table.Col>
-                                            <Table.Col>Service</Table.Col>
-                                            <Table.Col>04/31/20</Table.Col>
-                                            <Table.Col>Can you change the locks. I lost the house key.</Table.Col>
-                                            <Table.Col>
-                                                <Form.Switch type="radio" name="4" value="4" />
-                                            </Table.Col>
-                                        </Table.Row>
-                                        <Table.Row>
-                                            <Table.Col><a href="">10125 Reno Court</a></Table.Col>
-                                            <Table.Col>Service</Table.Col>
-                                            <Table.Col>02/10/20</Table.Col>
-                                            <Table.Col>Changed carpets to laminate before new tenants move in.</Table.Col>
-                                            <Table.Col>
-                                                <Form.Switch type="radio" name="5" value="5" />
                                             </Table.Col>
                                         </Table.Row>
                                     </Table.Body>
@@ -146,14 +110,7 @@ class PODashboard extends Component {
                             </div>
                         </div>
                         <div className="container d-flex justify-content-center">
-                            <Pagination>
-                                <Pagination.First />
-                                <Pagination.Prev />
-                                <Pagination.Item active>{1}</Pagination.Item>
-                                <Pagination.Item>{2}</Pagination.Item>
-                                <Pagination.Next />
-                                <Pagination.Last />
-                            </Pagination>
+                            {/* PAGINATION GOES HERE */}
                         </div>
                     </div>
                 </Container>
@@ -164,7 +121,7 @@ class PODashboard extends Component {
                     <div className="card">
                         <div className="d-flex justify-content-between">
                             <p className="lead m-3">Properties</p>
-                            <button className="btn btn-sm btn-success m-3"><i class="fas fa-plus mr-2"></i>Add Property</button>
+                            <Link className="btn btn-sm btn-success m-3" to="/add-property"><i class="fas fa-plus mr-2"></i>Add Property</Link>
                         </div>
                         <div className="table-responsive">
                             <div className="container text-center">
@@ -179,53 +136,13 @@ class PODashboard extends Component {
                                     </Table.Header>
                                     <Table.Body>
                                         <Table.Row>
-                                            <Table.Col><a href="">001</a></Table.Col>
-                                            <Table.Col>5616 Pleasant Ave</Table.Col>
-                                            <Table.Col>$7,200</Table.Col>
-                                            <Table.Col>$0</Table.Col>
-                                            <Table.Col>Leased</Table.Col>
+                                            <Table.Col><a href=""></a></Table.Col>
+                                            <Table.Col></Table.Col>
+                                            <Table.Col></Table.Col>
+                                            <Table.Col></Table.Col>
+                                            <Table.Col></Table.Col>
                                             <Table.Col>
-                                                <Button className="btn btn-sm btn-danger"><i class="fas fa-minus"></i></Button>
-                                            </Table.Col>
-                                        </Table.Row>
-                                        <Table.Row>
-                                            <Table.Col><a href="">002</a></Table.Col>
-                                            <Table.Col>5612 Harmony Ave</Table.Col>
-                                            <Table.Col>$25,000</Table.Col>
-                                            <Table.Col>$7,000</Table.Col>
-                                            <Table.Col>Leased</Table.Col>
-                                            <Table.Col>
-                                                <Button className="btn btn-sm btn-danger"><i class="fas fa-minus"></i></Button>
-                                            </Table.Col>
-                                        </Table.Row>
-                                        <Table.Row>
-                                            <Table.Col><a href="">003</a></Table.Col>
-                                            <Table.Col>10125 Reno Court</Table.Col>
-                                            <Table.Col>$0</Table.Col>
-                                            <Table.Col>$2,000</Table.Col>
-                                            <Table.Col>Vacant</Table.Col>
-                                            <Table.Col>
-                                                <Button className="btn btn-sm btn-danger"><i class="fas fa-minus"></i></Button>
-                                            </Table.Col>
-                                        </Table.Row>
-                                        <Table.Row>
-                                            <Table.Col><a href="">004</a></Table.Col>
-                                            <Table.Col>789 Harambe Dr. #101</Table.Col>
-                                            <Table.Col>$3,300</Table.Col>
-                                            <Table.Col>$0</Table.Col>
-                                            <Table.Col>Leased</Table.Col>
-                                            <Table.Col>
-                                                <Button className="btn btn-sm btn-danger"><i class="fas fa-minus"></i></Button>
-                                            </Table.Col>
-                                        </Table.Row>
-                                        <Table.Row>
-                                            <Table.Col><a href="">005</a></Table.Col>
-                                            <Table.Col>90210 Worst Show Blvd.</Table.Col>
-                                            <Table.Col>$24,500</Table.Col>
-                                            <Table.Col>$1,319</Table.Col>
-                                            <Table.Col>Leased</Table.Col>
-                                            <Table.Col>
-                                                <Button className="btn btn-sm btn-danger"><i class="fas fa-minus"></i></Button>
+                                                <button className="del-prop">Delete</button>
                                             </Table.Col>
                                         </Table.Row>
                                     </Table.Body>
@@ -233,17 +150,7 @@ class PODashboard extends Component {
                             </div>
                         </div>
                         <div className="container d-flex justify-content-center">
-                            <Pagination>
-                                <Pagination.First />
-                                <Pagination.Prev />
-                                <Pagination.Item active>{1}</Pagination.Item>
-                                <Pagination.Item>{2}</Pagination.Item>
-                                <Pagination.Item>{3}</Pagination.Item>
-                                <Pagination.Item>{4}</Pagination.Item>
-                                <Pagination.Item>{5}</Pagination.Item>
-                                <Pagination.Next />
-                                <Pagination.Last />
-                            </Pagination>
+                            {/* PAGINATION GOES HERE */}
                         </div>
                     </div>
                 </Container>
@@ -271,74 +178,19 @@ class PODashboard extends Component {
                                     </Table.Header>
                                     <Table.Body>
                                         <Table.Row>
-                                            <Table.Col><a href="">279</a></Table.Col>
-                                            <Table.Col>Security Deposit</Table.Col>
-                                            <Table.Col>10125 Reno Court</Table.Col>
-                                            <Table.Col>08/01/20</Table.Col>
-                                            <Table.Col>Paid</Table.Col>
-                                            <Table.Col>$2,500</Table.Col>
-                                        </Table.Row>
-                                    </Table.Body>
-                                    <Table.Body>
-                                        <Table.Row>
-                                            <Table.Col><a href="">278</a></Table.Col>
-                                            <Table.Col>Rent</Table.Col>
-                                            <Table.Col>5616 Pleasant Ave.</Table.Col>
-                                            <Table.Col>08/01/20</Table.Col>
-                                            <Table.Col>Paid</Table.Col>
-                                            <Table.Col>$1,800</Table.Col>
-                                        </Table.Row>
-                                    </Table.Body>
-                                    <Table.Body>
-                                        <Table.Row>
-                                            <Table.Col><a href="">277</a></Table.Col>
-                                            <Table.Col>Rent</Table.Col>
-                                            <Table.Col>5612 Harmony Ave.</Table.Col>
-                                            <Table.Col>08/01/20</Table.Col>
-                                            <Table.Col>Paid</Table.Col>
-                                            <Table.Col>$2,500</Table.Col>
-                                        </Table.Row>
-                                    </Table.Body>
-                                    <Table.Body>
-                                        <Table.Row>
-                                            <Table.Col><a href="">276</a></Table.Col>
-                                            <Table.Col>Rent</Table.Col>
-                                            <Table.Col>789 Harambe Dr #101</Table.Col>
-                                            <Table.Col>08/01/20</Table.Col>
-                                            <Table.Col>Paid</Table.Col>
-                                            <Table.Col>$1,300</Table.Col>
-                                        </Table.Row>
-                                    </Table.Body>
-                                    <Table.Body>
-                                        <Table.Row>
-                                            <Table.Col><a href="">275</a></Table.Col>
-                                            <Table.Col>Rent</Table.Col>
-                                            <Table.Col>90210 Worst Show Blvd</Table.Col>
-                                            <Table.Col>08/01/20</Table.Col>
-                                            <Table.Col>Paid</Table.Col>
-                                            <Table.Col>$4,083.33</Table.Col>
+                                            <Table.Col><a href=""></a></Table.Col>
+                                            <Table.Col></Table.Col>
+                                            <Table.Col></Table.Col>
+                                            <Table.Col></Table.Col>
+                                            <Table.Col></Table.Col>
+                                            <Table.Col></Table.Col>
                                         </Table.Row>
                                     </Table.Body>
                                 </Table>
                             </div>
                         </div>
                         <div className="container d-flex justify-content-center">
-                            <Pagination>
-                                <Pagination.First />
-                                <Pagination.Prev />
-                                <Pagination.Item active>{1}</Pagination.Item>
-                                <Pagination.Item>{2}</Pagination.Item>
-                                <Pagination.Item>{3}</Pagination.Item>
-                                <Pagination.Item>{4}</Pagination.Item>
-                                <Pagination.Item>{5}</Pagination.Item>
-                                <Pagination.Item>{6}</Pagination.Item>
-                                <Pagination.Item>{7}</Pagination.Item>
-                                <Pagination.Ellipsis />
-                                <Pagination.Item>{49}</Pagination.Item>
-                                <Pagination.Item>{50}</Pagination.Item>
-                                <Pagination.Next />
-                                <Pagination.Last />
-                            </Pagination>
+                            {/* PAGINATION GOES HERE */}
                         </div>
                     </div>
                 </Container>

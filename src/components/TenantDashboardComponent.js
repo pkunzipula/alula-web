@@ -53,9 +53,9 @@ class TenantDashboard extends Component {
                             <div className="card">
                                 <p className="lead m-3">Make a Payment</p>
                                 <div className="container text-center my-5">
-                                    <h5 className="lead mb-5">Payment Due August 1</h5>
-                                    <h1 className="display-3">$1,800</h1>
-                                    <button className="btn btn-outline-success">Pay Bill</button>
+                                    <h5 className="lead mb-5">Payment Due:</h5>
+                                    <h1 className="display-3">(PRICE)</h1>
+                                    <button className="btn btn-outline-success">Pay Rent</button>
                                 </div>
                             </div>
                         </div>
@@ -64,7 +64,7 @@ class TenantDashboard extends Component {
                                 <p className="lead m-3">Lease Term</p>
                                 <div className="container text-center my-5">
                                     <h5 className="lead mb-5">Remaining</h5>
-                                    <h1 className="display-3">11m 13d</h1>
+                                    <h1 className="display-3">(REMAINING LEASE LENGTH)</h1>
                                 </div>
                             </div>
                         </div>
@@ -90,10 +90,10 @@ class TenantDashboard extends Component {
                                     </Table.Header>
                                     <Table.Body>
                                         <Table.Row>
-                                            <Table.Col>Repair</Table.Col>
-                                            <Table.Col>08/02/20</Table.Col>
-                                            <Table.Col>Water heater has leaked all over the floor.</Table.Col>
-                                            <Table.Col>Yes</Table.Col>
+                                            <Table.Col></Table.Col>
+                                            <Table.Col></Table.Col>
+                                            <Table.Col></Table.Col>
+                                            <Table.Col></Table.Col>
                                         </Table.Row>
                                         
                                     </Table.Body>
@@ -101,12 +101,7 @@ class TenantDashboard extends Component {
                             </div>
                         </div>
                         <Container className="d-flex justify-content-center">
-                            <Pagination>
-                                <Pagination.First />
-                                <Pagination.Prev />
-                                <Pagination.Next />
-                                <Pagination.Last />
-                            </Pagination>
+                            {/* PAGINATION GOES HERE */}
                         </Container>
                     </div>
                 </Container>

@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { Navbar, Container } from 'react-bootstrap';
 import { Nav, Form, Button } from 'tabler-react';
-import { Link } from 'react-router-dom';
 
 import "tabler-react/dist/Tabler.css";
-
 
 import logo from '../images/logo-color.svg';
 

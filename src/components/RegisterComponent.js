@@ -2,7 +2,6 @@ import React, { Component} from 'react';
 import { Form, FormGroup, InputGroup, Button, Container, Navbar } from 'react-bootstrap';
 import "tabler-react/dist/Tabler.css";
 import { Link } from 'react-router-dom';
-
 import logo from '../images/logo-color.svg';
 
 // CAN SEE FULLNAME, EMAIL, PASSWORD AND CONFIRM PASSWORD IN ADDRESS BAR ** MUST FIX //

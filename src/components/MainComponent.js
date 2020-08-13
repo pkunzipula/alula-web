@@ -8,8 +8,10 @@ import POProfile from './POProfileComponent';
 import TenantDashboard from './TenantDashboardComponent';
 import TenantProfile from './TenantProfileComponent';
 import UserSelect from './UserSelectComponent'
+import AddProperty from './AddProperty';
 
 import { Switch, Route, Redirect } from 'react-router-dom';
+
 
 
 class Main extends Component {
@@ -26,6 +28,7 @@ class Main extends Component {
                 <Route path="/tenant" component={TenantDashboard} />
                 <Route path="/tenant-profile" component={TenantProfile} />
                 <Route path="/user-select" component={UserSelect} />
+                <Route path="/add-property" component={AddProperty} />
                 <Redirect to="/home" />
             </Switch>
         );
