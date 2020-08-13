@@ -68,10 +68,10 @@ class Home extends Component {
                                         <div className="mt-4">
                                             <div className="accordion" id="accordion" role="tablist">
                                                 <div className="card">
-                                                    <div className="card-header" role="tab" id="heading-2">
-                                                        <h6 className="mb-0"> <a className="collapsed" data-toggle="collapse" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2" data-abc="true">Manage your Properties </a> </h6>
+                                                    <div className="card-header" role="tab" id="heading-1">
+                                                        <h6 className="mb-0"> <a className="collapsed" data-toggle="collapse" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1" data-abc="true"> Manage your Properties </a> </h6>
                                                     </div>
-                                                    <div id="collapse-2" className="collapse" role="tabpanel" aria-labelledby="heading-2" data-parent="#accordion">
+                                                    <div id="collapse-1" className="collapse" role="tabpanel" aria-labelledby="heading-1" data-parent="#accordion">
                                                     <div className="card-body">
                                                         <div className="row">
                                                             <div className="col">
@@ -82,10 +82,10 @@ class Home extends Component {
                                                     </div>
                                                 </div>
                                                 <div className="card">
-                                                    <div className="card-header" role="tab" id="heading-1">
-                                                        <h6 className="mb-0"> <a data-toggle="collapse" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1" data-abc="true" className="collapsed"> Accept Payments </a> </h6>
+                                                    <div className="card-header" role="tab" id="heading-2">
+                                                        <h6 className="mb-0"> <a data-toggle="collapse" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2" data-abc="true" className="collapsed"> Accept Payments </a> </h6>
                                                     </div>
-                                                    <div id="collapse-1" className="collapse" role="tabpanel" aria-labelledby="heading-1" data-parent="#accordion">
+                                                    <div id="collapse-2" className="collapse" role="tabpanel" aria-labelledby="heading-2" data-parent="#accordion">
                                                         <div className="card-body">
                                                             <div className="row">
                                                                 <div className="col">

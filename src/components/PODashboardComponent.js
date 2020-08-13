@@ -1,18 +1,92 @@
 import React, { Component } from 'react';
 import { Navbar, Container, Pagination } from 'react-bootstrap';
-import { Nav, Table, Button, Dropdown, Badge, Form } from 'tabler-react';
+import { Nav, Table, Dropdown, Badge, Form } from 'tabler-react';
+import { Link } from 'react-router-dom';
 import "tabler-react/dist/Tabler.css";
 
-
 import logo from '../images/logo-color.svg';
-import { Link } from 'react-router-dom';
+
+// JSON DATA
+import { OVERVIEW } from '../shared/overview';
+import { SERVICEREQUEST } from '../shared/serviceRequest';
+import { PROPERTY } from '../shared/property';
+import { INVOICES } from '../shared/invoices';
 
 class PODashboard extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            overview: OVERVIEW,
+            serviceRequests: SERVICEREQUEST,
+            properties: PROPERTY,
+            invoices: INVOICES
         }
+    }
+
+    renderOverviewTableData() {
+        return this.state.overview.map((overview) => {
+            const { propsMangaged, totRevenue, totLoses, totServiceRequests } = overview
+            return (
+                <Table.Row>
+                    <Table.Col><strong>{propsMangaged}</strong></Table.Col>
+                    <Table.Col><strong>${totRevenue}</strong></Table.Col>
+                    <Table.Col><strong>${totLoses}</strong></Table.Col>
+                    <Table.Col><strong>{totServiceRequests}</strong></Table.Col>
+                    <Table.Col> 
+                        <a href=""><i class="fas fa-print mr-2"></i>Print Tax Form</a>
+                    </Table.Col>
+                </Table.Row>
+            )
+        })
+    }
+
+    renderServiceRequestTableData() {
+        return this.state.serviceRequests.map((serviceRequests) => {
+            const { property, created } = serviceRequests
+            return(
+                <Table.Row>
+                    <Table.Col><a href="">{property}</a></Table.Col>
+                    <Table.Col>{created}</Table.Col>
+                    {/* <Table.Col>{message}</Table.Col> */}
+                    <Table.Col>
+                        <Form.Switch type="radio" name="1" value="1" />
+                    </Table.Col>
+                </Table.Row>
+            )
+        })
+    }
+
+    renderPropertyTableData() {
+        return this.state.properties.map((properties) => {
+            const { id, property, revenue, loses, status } = properties
+            return(
+                <Table.Row>
+                    <Table.Col><a href="">{id}</a></Table.Col>
+                    <Table.Col>{property}</Table.Col>
+                    <Table.Col>${revenue}</Table.Col>
+                    <Table.Col>${loses}</Table.Col>
+                    <Table.Col>{status}</Table.Col>
+                    <Table.Col>
+                        <button className="del-prop">Delete</button>
+                    </Table.Col>
+                </Table.Row>
+            )
+        })
+    }
+
+    renderInvoiceTableData() {
+        return this.state.invoices.map((invoices) => {
+            const { number, property, created, status, amount } = invoices
+            return(
+                <Table.Row>
+                    <Table.Col><a href="">{number}</a></Table.Col>
+                    <Table.Col>{property}</Table.Col>
+                    <Table.Col>{created}</Table.Col>
+                    <Table.Col>{status}</Table.Col>
+                    <Table.Col>{amount}</Table.Col>
+                </Table.Row>
+            )
+        })
     }
 
     render() {
@@ -59,15 +133,7 @@ class PODashboard extends Component {
                                         <Table.ColHeader>Actions</Table.ColHeader>
                                     </Table.Header>
                                     <Table.Body>
-                                        <Table.Row>
-                                            <Table.Col><strong></strong></Table.Col>
-                                            <Table.Col><strong></strong></Table.Col>
-                                            <Table.Col><strong></strong></Table.Col>
-                                            <Table.Col><strong></strong></Table.Col>
-                                            <Table.Col> 
-                                                
-                                            </Table.Col>
-                                        </Table.Row>
+                                        {this.renderOverviewTableData()}
                                     </Table.Body>
                                 </Table>
                             </div>
@@ -90,21 +156,12 @@ class PODashboard extends Component {
                                 <Table>
                                     <Table.Header>
                                         <Table.ColHeader>Property</Table.ColHeader>
-                                        <Table.ColHeader>Request Type</Table.ColHeader>
                                         <Table.ColHeader>Created</Table.ColHeader>
-                                        <Table.ColHeader>Message</Table.ColHeader>
+                                        {/* <Table.ColHeader>Message</Table.ColHeader> */}
                                         <Table.ColHeader>Completed</Table.ColHeader>
                                     </Table.Header>
                                     <Table.Body>
-                                        <Table.Row>
-                                            <Table.Col><a href=""></a></Table.Col>
-                                            <Table.Col></Table.Col>
-                                            <Table.Col></Table.Col>
-                                            <Table.Col></Table.Col>
-                                            <Table.Col>
-                                                <Form.Switch type="radio" name="1" value="1" />
-                                            </Table.Col>
-                                        </Table.Row>
+                                        {this.renderServiceRequestTableData()}
                                     </Table.Body>
                                 </Table>
                             </div>
@@ -135,16 +192,7 @@ class PODashboard extends Component {
                                         <Table.ColHeader>Action</Table.ColHeader>
                                     </Table.Header>
                                     <Table.Body>
-                                        <Table.Row>
-                                            <Table.Col><a href=""></a></Table.Col>
-                                            <Table.Col></Table.Col>
-                                            <Table.Col></Table.Col>
-                                            <Table.Col></Table.Col>
-                                            <Table.Col></Table.Col>
-                                            <Table.Col>
-                                                <button className="del-prop">Delete</button>
-                                            </Table.Col>
-                                        </Table.Row>
+                                        {this.renderPropertyTableData()}
                                     </Table.Body>
                                 </Table>
                             </div>
@@ -170,21 +218,13 @@ class PODashboard extends Component {
                                 <Table>
                                     <Table.Header>
                                         <Table.ColHeader>No.</Table.ColHeader>
-                                        <Table.ColHeader>Subject</Table.ColHeader>
                                         <Table.ColHeader>Client</Table.ColHeader>
                                         <Table.ColHeader>Created</Table.ColHeader>
                                         <Table.ColHeader>Status</Table.ColHeader>
                                         <Table.ColHeader>Amount</Table.ColHeader>
                                     </Table.Header>
                                     <Table.Body>
-                                        <Table.Row>
-                                            <Table.Col><a href=""></a></Table.Col>
-                                            <Table.Col></Table.Col>
-                                            <Table.Col></Table.Col>
-                                            <Table.Col></Table.Col>
-                                            <Table.Col></Table.Col>
-                                            <Table.Col></Table.Col>
-                                        </Table.Row>
+                                        {this.renderInvoiceTableData()}
                                     </Table.Body>
                                 </Table>
                             </div>

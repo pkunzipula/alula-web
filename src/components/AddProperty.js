@@ -11,6 +11,8 @@ class AddProperty extends Component {
         }
     }
 
+
+
     render() {
         return(
             <React.Fragment>
@@ -29,7 +31,7 @@ class AddProperty extends Component {
                         <p className="lead"></p>
                         <Container className="text-center">
                             <Form.FieldSet>
-                                <Table >
+                                <Table>
                                     <thead>
                                         <tr>
                                             <th className="text-center">Property Address</th>
@@ -81,7 +83,7 @@ class AddProperty extends Component {
                 </Container>
                 {/* END Add New Property Button */}
                 {/* Save Changes Button */}
-                <Container className="pt-5 mt-5">
+                <Container className="p-5 mt-5">
                     <button className="m-5 btn btn-lg btn-primary">Save Changes</button>
                 </Container>
                 {/* END Save Changes Button */}
