@@ -334,9 +334,16 @@ List Group
 .del-prop:focus {
   background-color: transparent;
   border: none;
+  border-bottom: 1px solid #d9534f;
+  border-radius: 0;
   outline: none !important;
   color: #d9534f;
-  text-decoration: underline;
+  padding: 0 0 2px 0;
+  font-size: 14px;
+}
+
+.checkbox {
+  padding-right: 10px;
 }
 
 

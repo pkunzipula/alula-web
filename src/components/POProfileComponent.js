@@ -79,14 +79,35 @@ class Profile extends Component {
                         <div>
                             <Form.FieldSet>
                                 <Form.Group label="Account Holder's Name" isRequired>
-                                    <Form.Input name="update-acc-name" />
+                                    <Form.Input name="account-name" />
                                 </Form.Group>
                                 <Form.Group label="Routing Number" isRequired>
-                                    <Form.Input name="update-routing-number" />
+                                    <Form.MaskedInput 
+                                        name="routing-number" 
+                                        mask={[/\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/]}
+                                    />
                                 </Form.Group>
                                 <Form.Group label="Account Number" isRequired>
-                                    <Form.Input name="update-account-number" />
+                                    <Form.MaskedInput 
+                                        name="account-number" 
+                                        mask={[/\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/]}
+                                    />
                                 </Form.Group>
+                                <Form.Group label="Tax Payer ID" isRequired>
+                                    <Form.Input name="tax-payer-id" />
+                                </Form.Group>
+                            </Form.FieldSet>
+                        </div>
+                    </div>
+                </Container>
+                {/* END Update Payment Method */}
+
+                {/* Update Address */}
+                <Container className="mt-5">
+                    <div className="m-5">
+                        <p className="lead">Update Address</p>
+                        <div>
+                            <Form.FieldSet>
                                 <Form.Group label="Address" isRequired>
                                     <Form.Input name="update-address" className="mb-4" placeholder="Address" />
                                     <Form.Input name="update-city" className="mb-4" placeholder="City" />
@@ -97,12 +118,12 @@ class Profile extends Component {
                                         mask={[/\d/, /\d/, /\d/, /\d/, /\d/]}
                                     />
                                 </Form.Group>
-                                <button type='submit' value='Submit' class="btn btn-primary">Update Payment Method</button>
+                                <button type='submit' value='Submit' class="btn btn-primary">Update Address</button>
                             </Form.FieldSet>
                         </div>
                     </div>
                 </Container>
-                {/* END Update Payment Method */}
+                {/* END Update Address */}
 
                 {/* Preferences */}
                 <Container className="mt-5">

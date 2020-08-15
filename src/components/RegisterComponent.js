@@ -1,5 +1,5 @@
 import React, { Component} from 'react';
-import { Form, FormGroup, InputGroup, Button, Container, Navbar } from 'react-bootstrap';
+import { Form, FormGroup, Container, Navbar } from 'react-bootstrap';
 import "tabler-react/dist/Tabler.css";
 import { Link } from 'react-router-dom';
 import logo from '../images/logo-color.svg';

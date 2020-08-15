@@ -9,6 +9,9 @@ import TenantDashboard from './TenantDashboardComponent';
 import TenantProfile from './TenantProfileComponent';
 import UserSelect from './UserSelectComponent'
 import AddProperty from './AddProperty';
+import AddServiceRequest from './AddServiceRequest';
+import Onboarding from './OnboardingComponent';
+
 
 import { Switch, Route, Redirect } from 'react-router-dom';
 
@@ -29,6 +32,8 @@ class Main extends Component {
                 <Route path="/tenant-profile" component={TenantProfile} />
                 <Route path="/user-select" component={UserSelect} />
                 <Route path="/add-property" component={AddProperty} />
+                <Route path="/service-request" component={AddServiceRequest} />
+                <Route path="/onboarding" component={Onboarding} />
                 <Redirect to="/home" />
             </Switch>
         );

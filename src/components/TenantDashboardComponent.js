@@ -5,13 +5,28 @@ import "tabler-react/dist/Tabler.css";
 
 
 import logo from '../images/logo-color.svg';
+import { Link } from 'react-router-dom';
+
+import { CREATED_SERVICE_REQUESTS } from '../shared/createdServiceRequests';
 
 class TenantDashboard extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            serviceRequests: CREATED_SERVICE_REQUESTS
         }
+    }
+
+    renderMyServiceRequestTableData() {
+        return this.state.serviceRequests.map((serviceRequests) => {
+            const { created, completed } = serviceRequests
+            return(
+                <Table.Row>
+                    <Table.Col>{created}</Table.Col>
+                    <Table.Col>{completed}</Table.Col>
+                </Table.Row>
+            )
+        })
     }
 
     render() {
@@ -77,25 +92,17 @@ class TenantDashboard extends Component {
                     <div className="card">
                     <div className="d-flex justify-content-between">
                             <p className="lead m-3">Service Requests</p>
-                            <button className="btn btn-sm btn-success m-3"><i class="fas fa-plus mr-2"></i>Add Service Request</button>
+                            <Link className="btn btn-sm btn-success m-3" to="/service-request"><i class="fas fa-plus mr-2"></i>Add Service Request</Link>
                         </div>
                         <div className="table-responsive">
                             <div className="container text-center">
                                 <Table>
                                     <Table.Header>
-                                        <Table.ColHeader>Request Type</Table.ColHeader>
                                         <Table.ColHeader>Created</Table.ColHeader>
-                                        <Table.ColHeader>Message</Table.ColHeader>
                                         <Table.ColHeader>Completed</Table.ColHeader>
                                     </Table.Header>
                                     <Table.Body>
-                                        <Table.Row>
-                                            <Table.Col></Table.Col>
-                                            <Table.Col></Table.Col>
-                                            <Table.Col></Table.Col>
-                                            <Table.Col></Table.Col>
-                                        </Table.Row>
-                                        
+                                        {this.renderMyServiceRequestTableData()}
                                     </Table.Body>
                                 </Table>
                             </div>

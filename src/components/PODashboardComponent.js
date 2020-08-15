@@ -49,7 +49,7 @@ class PODashboard extends Component {
                     <Table.Col>{created}</Table.Col>
                     {/* <Table.Col>{message}</Table.Col> */}
                     <Table.Col>
-                        <Form.Switch type="radio" name="1" value="1" />
+                        <Form.Switch type="radio" value="1" />
                     </Table.Col>
                 </Table.Row>
             )
