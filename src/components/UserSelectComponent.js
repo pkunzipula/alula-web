@@ -29,7 +29,7 @@ class UserSelect extends Component {
                     <p className="lead text-center my-5">What type of user are you?</p>
                     <Container className="p-5 d-flex justify-content-center">
                         <Link to="/onboarding" className="m-5 p-5 tile"> Landlord </Link>
-                        <Link to="/tenant" className="m-5 p-5 tile"> Tenant </Link>
+                        <Link to="/register" className="m-5 p-5 tile"> Tenant </Link>
                     </Container>
                     <Container className="text-center">
                         <Link to="/login" className="button">Have an Account? Sign In Here</Link>

@@ -43,7 +43,7 @@ class Home extends Component {
                             <div className="col pt-5">
                                 <h1 className="display-4">Property Management Done Right</h1>
                                 <p className="lead mb-5">A One Stop Shop for Landlords and Property Managers</p>
-                                <Link to="/register"><Button className="btn-lg mt-5">Let's Get Started</Button></Link>
+                                <Link to="/user-select"><Button className="btn-lg mt-5">Let's Get Started</Button></Link>
                             </div>
                         </div>
                     </div>
