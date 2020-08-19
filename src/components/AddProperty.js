@@ -6,13 +6,21 @@ import "tabler-react/dist/Tabler.css";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 
+import { addProperty } from "../redux/ActionCreators";
+
 const mapStateToProps = (state) => {
   return {
     invoices: state.invoices,
     overview: state.overview,
-    property: state.property,
-    serviceRequest: state.serviceRequest,
+    properties: state.properties,
+    serviceRequests: state.serviceRequests,
   };
+};
+
+const mapDispatchToProps = {
+  addProperty: (propertyId, address) => {
+    addProperty(propertyId, address);
+  },
 };
 class AddProperty extends Component {
   constructor(props) {
@@ -139,4 +147,6 @@ class AddProperty extends Component {
   }
 }
 
-export default withRouter(connect(mapStateToProps)(AddProperty));
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(AddProperty)
+);
